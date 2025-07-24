@@ -22,24 +22,24 @@ interface ClaudeKeyword {
 const claudeKeywords: ClaudeKeyword[] = [
   // Thinking & Reasoning
   {
-    id: "think-extended",
-    title: "Extended Thinking",
-    description: "Enable extended thinking mode for deeper reasoning",
-    keyword: "<thinking>\nPlease think through this step by step using extended reasoning.\n</thinking>",
+    id: "think-basic",
+    title: "Think",
+    description: "Basic thinking mode for standard reasoning",
+    keyword: "think",
     category: "thinking"
   },
   {
-    id: "think-budget",
-    title: "Thinking Budget",
-    description: "Set a token budget for thinking (e.g., 1000 tokens)",
-    keyword: "<thinking_budget>1000</thinking_budget>",
+    id: "think-hard",
+    title: "Think Hard",
+    description: "Enhanced thinking mode for complex problems",
+    keyword: "think hard",
     category: "thinking"
   },
   {
-    id: "think-tool",
-    title: "Think Tool Usage",
-    description: "Use the think tool for structured reasoning",
-    keyword: "Please use your think tool to analyze this before responding.",
+    id: "think-ultra",
+    title: "Ultrathink",
+    description: "Maximum thinking mode for very complex analysis",
+    keyword: "ultrathink",
     category: "thinking"
   },
   

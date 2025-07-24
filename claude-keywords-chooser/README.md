@@ -36,24 +36,23 @@ Claude AI offers various special keywords and modifiers that can significantly i
 
 ### 🧠 Thinking & Reasoning
 
-#### Extended Thinking
-- **Purpose**: Enables Claude's extended thinking mode for deeper, more thorough reasoning
-- **Use Case**: Complex problems requiring step-by-step analysis, mathematical proofs, strategic planning
-- **Keyword**: `<thinking>\nPlease think through this step by step using extended reasoning.\n</thinking>`
-- **Example**: Use when asking Claude to solve complex coding problems or analyze business strategies
+#### Think
+- **Purpose**: Enables basic thinking mode for standard reasoning
+- **Use Case**: General questions that benefit from some reflection
+- **Keyword**: `think`
+- **Example**: Use for straightforward problem-solving or analysis
 
-#### Thinking Budget
-- **Purpose**: Controls the token budget allocated for Claude's thinking process
-- **Use Case**: Balance between response quality and speed/cost
-- **Keyword**: `<thinking_budget>1000</thinking_budget>`
-- **Example**: Set to 500 tokens for quick responses, 2000+ for complex analysis
-- **Note**: Higher budgets allow more thorough thinking but increase response time and cost
+#### Think Hard
+- **Purpose**: Enables enhanced thinking mode for complex problems
+- **Use Case**: Challenging problems requiring deeper analysis
+- **Keyword**: `think hard`
+- **Example**: Use for complex coding problems, strategic planning, or mathematical analysis
 
-#### Think Tool Usage
-- **Purpose**: Explicitly requests Claude to use structured thinking before responding
-- **Use Case**: Policy-heavy environments, sequential decision making, error-prone tasks
-- **Keyword**: `Please use your think tool to analyze this before responding.`
-- **Example**: When asking Claude to review code for security vulnerabilities or make important recommendations
+#### Ultrathink
+- **Purpose**: Enables maximum thinking mode for very complex analysis
+- **Use Case**: Extremely complex problems requiring the deepest level of reasoning
+- **Keyword**: `ultrathink`
+- **Example**: Use for advanced research problems, complex system design, or multi-layered analysis
 
 ### 🔨 Tools
 
@@ -143,21 +142,19 @@ Claude AI offers various special keywords and modifiers that can significantly i
 You can select multiple keywords from different categories to create sophisticated prompts:
 
 **Example Combination**:
-- Extended Thinking + Web Search + Step-by-Step Reasoning
+- Think Hard + Web Search + Step-by-Step Reasoning
 - Result: A prompt that searches for current information, thinks through it carefully, and explains the reasoning process
 
 #### Custom Prompt Integration
 When you add a custom prompt, the extension automatically appends selected keywords:
 
 **Input**: "Explain quantum computing to a beginner"
-**Selected**: Extended Thinking + Detailed Output + Step-by-Step Reasoning
+**Selected**: Think Hard + Detailed Output + Step-by-Step Reasoning
 **Result**: 
 ```
 Explain quantum computing to a beginner
 
-<thinking>
-Please think through this step by step using extended reasoning.
-</thinking>
+think hard
 
 Please provide a detailed and comprehensive response.
 
@@ -178,26 +175,26 @@ Please break this down step by step and show your reasoning.
 ### Keyword Selection Strategy
 
 1. **Start Simple**: Begin with one or two keywords and gradually add more as needed
-2. **Match Complexity**: Use Extended Thinking for complex tasks, Concise Output for simple ones
-3. **Consider Context**: Web Search for current events, Think Tool for critical decisions
-4. **Balance Cost vs Quality**: Higher thinking budgets provide better results but cost more
+2. **Match Complexity**: Use Think for basic tasks, Think Hard for complex ones, Ultrathink for the most challenging
+3. **Consider Context**: Web Search for current events, thinking modes for analysis depth
+4. **Progressive Thinking**: Start with "think" and escalate to "think hard" or "ultrathink" as needed
 
 ### Common Combinations
 
 #### For Code Reviews
-- Think Tool Usage + Verify Results + Step-by-Step Reasoning
+- Think Hard + Verify Results + Step-by-Step Reasoning
 
 #### For Research Tasks
-- Web Search + Extended Thinking + Detailed Output
+- Web Search + Think Hard + Detailed Output
 
 #### For Quick Help
-- Concise Output + Code Only (if applicable)
+- Think + Concise Output + Code Only (if applicable)
 
 #### For Learning
-- Detailed Output + Step-by-Step Reasoning + Multiple Approaches
+- Think + Detailed Output + Step-by-Step Reasoning + Multiple Approaches
 
 #### For Complex Analysis
-- Extended Thinking + Tool Chaining + Verify Results
+- Ultrathink + Tool Chaining + Verify Results
 
 ## Troubleshooting
 
@@ -205,11 +202,11 @@ Please break this down step by step and show your reasoning.
 
 **Keywords Not Working**: Ensure you're using the complete generated prompt, not just the keywords
 **Extension Not Loading**: Run `npx ray dev` in the extension directory
-**No Response Improvement**: Try combining complementary keywords or adjusting thinking budget
+**No Response Improvement**: Try combining complementary keywords or using a higher thinking level
 
 ### Performance Tips
 
-- Use Thinking Budget to control response time and cost
+- Use progressive thinking levels (think → think hard → ultrathink) based on complexity
 - Combine Parallel Tool Calls with multiple tool-using keywords
 - Use Concise Output when you don't need detailed explanations
 
@@ -225,9 +222,9 @@ Feel free to contribute additional keywords or improvements:
 
 | Category | Keyword | Use Case | Response Impact |
 |----------|---------|----------|-----------------|
-| Thinking | Extended Thinking | Complex problems | Deeper analysis, longer response time |
-| Thinking | Thinking Budget | Control quality/speed | Adjustable thinking depth |
-| Thinking | Think Tool | Critical decisions | Structured reasoning process |
+| Thinking | Think | General problems | Basic reasoning |
+| Thinking | Think Hard | Complex problems | Enhanced analysis |
+| Thinking | Ultrathink | Very complex problems | Maximum reasoning depth |
 | Tools | Parallel Tools | Multiple operations | Faster execution |
 | Tools | Tool Chaining | Sequential workflows | Comprehensive task completion |
 | Search | Web Search | Current information | Up-to-date data |
