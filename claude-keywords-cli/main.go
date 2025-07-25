@@ -54,7 +54,7 @@ var claudeKeywords = []ClaudeKeyword{
 		ID:          "tool-web-search",
 		Title:       "Web Search",
 		Description: "Enable web search capabilities",
-		Keyword:     "Please search the web for current information on this topic.",
+		Keyword:     "Search the web for current information on this topic.",
 		Category:    "search",
 	},
 	{
@@ -69,14 +69,14 @@ var claudeKeywords = []ClaudeKeyword{
 		ID:          "output-concise",
 		Title:       "Concise Output",
 		Description: "Request concise, direct responses",
-		Keyword:     "Please be concise and direct in your response.",
+		Keyword:     "Be concise and direct in your response.",
 		Category:    "output",
 	},
 	{
 		ID:          "output-detailed",
 		Title:       "Detailed Output",
 		Description: "Request detailed, comprehensive responses",
-		Keyword:     "Please provide a detailed and comprehensive response.",
+		Keyword:     "Provide a detailed and comprehensive response.",
 		Category:    "output",
 	},
 	{
@@ -91,21 +91,21 @@ var claudeKeywords = []ClaudeKeyword{
 		ID:          "reason-step-by-step",
 		Title:       "Step-by-Step Reasoning",
 		Description: "Break down complex problems step by step",
-		Keyword:     "Please break this down step by step and show your reasoning.",
+		Keyword:     "Break this down step by step and show your reasoning.",
 		Category:    "reasoning",
 	},
 	{
 		ID:          "reason-multiple-approaches",
 		Title:       "Multiple Approaches",
 		Description: "Consider multiple approaches to the problem",
-		Keyword:     "Please consider multiple approaches and compare their trade-offs.",
+		Keyword:     "Consider multiple approaches and compare their trade-offs.",
 		Category:    "reasoning",
 	},
 	{
 		ID:          "reason-verify",
 		Title:       "Verify Results",
 		Description: "Double-check and verify the results",
-		Keyword:     "Please verify your results and double-check your work.",
+		Keyword:     "Verify your results and double-check your work.",
 		Category:    "reasoning",
 	},
 }
@@ -273,7 +273,7 @@ func generatePrompt(customPrompt string, selectedKeywordIDs []string) string {
 		}
 	}
 
-	return strings.Join(parts, "\n\n")
+	return strings.Join(parts, "\n")
 }
 
 func createOptionsForCategory(keywords []ClaudeKeyword) []huh.Option[string] {
